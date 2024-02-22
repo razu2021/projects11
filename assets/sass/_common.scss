@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&family=Open+Sans:wght@300;400;700;800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,600;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// all variable is here 
+$bodybg:#fff;
+$overflowx: hidden;
+$open :'Open Sans', sans-serif;
+$nato :'Noto Sans', sans-serif;
+$raleway :'Raleway', sans-serif;
+$sectionbg : #fff;
+$bannerbg :rgba(255,255,255,0.68);
+$fontweight:700;
+$h1font_size:4.5rem;
+$pfont_size:1.6rem;
+// color
+$color1: #fff;
+$color2 :#000;
+$color3: #111a2e;
+// button
+$button1 : #111a2e;
+
+// all mixing css 
+
+
+h1{
+    font-size: 3.4rem;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 2.4rem;
+    margin: 0;
+    padding: 0;
+}
+h4{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+h5{
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+h6{
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: $pfont_size;
+    margin: 0;
+    padding: 0;
+    font-family: $open;
+}
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// mixing css 
+@mixin heading1 ($color:#fff,$fontsize:3.4rem){
+    font-size: $fontsize;
+    color: $color;
+    font-weight: $fontweight;
+    font-family: $open;
+    padding: .5rem 0rem;
+}
+
+// peragraph 
+@mixin peragraph($color:#000,$fsize:1.6rem,$fw:400,){
+  color: $color;
+  font-size: $fsize;
+  font-weight: $fw;
+}
+
+// after before 
+@mixin after($h:.1rem,$w:.1rem,$bg:#000,$d:block){
+    content: '';
+    height: $h;
+    width: $w;
+    background: $bg;
+    display: $d;
+    position: absolute;
+}
+@mixin before($h:.1rem,$w:.1rem,$bg:#000,$d:block){
+    content: '';
+    height: $h;
+    width: $w;
+    background: $bg;
+    display: $d;
+    position: absolute;
+}
+
+// common button 1
+.comon_button1{
+    padding: 2rem 0rem;
+    button{
+        border: none;
+        background-color: #293de9;
+        border-radius: .8rem;
+        padding: 1rem 1.5rem;
+        transition: all 0.35s;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        &:hover{
+            background-color: $color1;
+            transform: scale(1.05);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+            a{
+                color:$color2;
+            }
+        }
+        a{
+            color: $color1;
+            font-size: 1.6rem;
+            transition: all 0.35s;
+            text-transform: normal;
+        }
+    }
+}
+
+
+// contact form css 
+form{
+    width: 100%;
+    input{
+        height: 5rem;
+    }
+    .form-control{
+        font-size: 1.8rem;
+        border:1px solid #000;
+    }
+    label{
+        font-size: 1.8rem;
+    }
+    .submit_button{
+        font-size: 1.7rem;
+    }
+
+}
+// social icon
+.social_icon{
+    a{
+        padding: 1rem 1rem;
+        font-size: 2rem;
+    }
+}

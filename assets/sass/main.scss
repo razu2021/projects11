@@ -1,0 +1,13 @@
+@import "_compaile.scss";
+
+body{
+    background-color: $bodybg;
+    scroll-behavior: smooth;
+    font-family: $open;
+    overflow-x: $overflowx;
+}
+
+.razu{
+    font-size: 30rem;
+    font-weight: 700;
+}
